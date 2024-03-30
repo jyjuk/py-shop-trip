@@ -6,12 +6,12 @@ from app.shop import Shop
 
 
 def shop_trip() -> None:
-    with open("app/config.json", "r") as config_file:
-        config = json.load(config_file)
+    with open("app/config.json", "r") as json_file:
+        load_data = json.load(json_file)
 
-    shops = config.get("shops")
-    customers = config.get("customers")
-    fuel_price = config.get("FUEL_PRICE")
+    shops = load_data.get("shops")
+    customers = load_data.get("customers")
+    fuel_price = load_data.get("FUEL_PRICE")
 
     customers_list = []
     shops_list = []
